@@ -1,6 +1,5 @@
 # Question
 # https://codeforces.com/contest/560/problem/A
-
 n=int(raw_input())
 notas = map(int, raw_input().split())
 notas.sort()
@@ -12,7 +11,7 @@ flag = True
 i=n-1
 while(soma < maximo and flag): #while loop with condition
   rest = soma #initializing
-  while(i >= 0): #second while
+  while(i >= 0): 
     rest = rest % notas[i]
     if(rest == 0):
       break #break case
@@ -22,8 +21,7 @@ while(soma < maximo and flag): #while loop with condition
       flag = False
     i =n-1
   soma=soma+1
-
-if(soma == maximo): #if equal print -1
+if(soma == maximo): #if equal, print -1
   print -1
 else:
   print soma - 1
